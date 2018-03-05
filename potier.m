@@ -36,4 +36,14 @@ Zsnsat = Vt/(sqrt(3)*Iazs);
 
 Xsnsat = sqrt(Zsnsat^2 - Ra^2);
 
+% Passo 6: Determinar Xms
+Xms = (Xsnsat - Xl)/Ks;
+
+% Passo 7: Determinar Xs(sat)
+Xssat = Xms + Xp;
+
+% Passo 8: Determinar Ef
+Xdsat = Xssat;
+Xqsat = 0.57*Xdsat;
+Ef = Vt/sqrt(3) + Ra*(Ia * (cos(acos(fp)) - j*sin(acos(fp)))) + j*Xssat*(Ia * (cos(acos(fp)) - j*sin(acos(fp))))
 
