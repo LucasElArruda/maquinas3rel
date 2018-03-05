@@ -28,4 +28,12 @@ IfvpEntreferro = IfvpEntreferrocm*30;
 Ks = IfvpCA/IfvpEntreferro;
 
 % Passo 5: Determinar Xs(n/sat)
+Vtcm = Vt/36;    %Depende da escala de Va e é usado para marcar Vt no gráfico
+%Projeta o ponto onde Vt se encontra para a reta cc e verifica o valor de Ia
+Iazs = 3.5*80*10^(-3);
+
+Zsnsat = Vt/(sqrt(3)*Iazs);
+
+Xsnsat = sqrt(Zsnsat^2 - Ra^2);
+
 
