@@ -13,6 +13,10 @@ Xp = deltaVl/(sqrt(3)*Ia);
 % Passo 2: Determinacao da tensao de Potier (Vp)
 Vpfase = Vt/sqrt(3) + Ra*(Ia * (cos(acos(fp)) - j*sin(acos(fp)))) + j*Xp*(Ia * (cos(acos(fp)) - j*sin(acos(fp))));
 
+Vplinha = abs(Vpfase)*sqrt(3);
+
+Vplinhacm = Vplinha/36;   % Depende da escala escolhinda para o grafico
+
 % Passo 3: Componentes da corrente de campo
 Ifgcm = 4.9;
 Ifsicm = 13.8;
