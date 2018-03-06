@@ -85,3 +85,8 @@ E0 = X(1).*ifEf/(X(2) + ifEf)
 
 % Calculo da regulacao
 Reg = (E0 - Vt)/Vt
+
+% Cálculo do fator de forma
+basecm = 11;
+baseif = basecm*30*10^(-3);
+alfa = baseif/Ia;
