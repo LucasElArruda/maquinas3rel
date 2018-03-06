@@ -24,6 +24,30 @@ Ifs = Ifscm*30;
 
 Ifl = Ifs + sqrt((Ifg + Ifsi*sin(acos(fp)))^2 + (Ifsi*cos(acos(fp)))^2);
 
+% Passo 4: Determinação de Ef
+Iflcm = Ifl/30;
+
+% Com o valor obtido para Ifl não corresponde a um valor ensaiado na curva
+% CA, deve-se realizar extrapolação: Va = a*if/(b + if)
+
+syms a b;
+
+P1 = [300*10^(-3), 13.9*36];
+P2 = [12*30*10^(-3), 15.65*36];
+
+% Va = a*if/(b + if) => Va*b + Va*if = a*if
+% a*if - b*Va = - Va*if
+eq1 = a*P1(1) - b*P1(2) == P1(1)*P1(2);
+eq2 = a*P2(1) - b*P2(2) == P2(1)*P2(2);
+
+[A,B] = equationsToMatrix([eq1, eq2], [a, b]);
+
+X = linsolve(A,B);
+
+% Assim, o Ef pode ser determinado como:
+Ef = X(1)* Ifl*10^(-3)/(X(2) + Ifl*10^(-3))
+
+% Passo 5:
+reg = (Ef - Vt)/Vt 
 
 
-% Passo 4
