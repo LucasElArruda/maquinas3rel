@@ -1,4 +1,10 @@
-%% Método IEEE
+%% Universidade Federal de Campina Grande
+%% Máquinas Elétricas
+% Autor: Lucas Eliseu Gonçalves de Arruda
+% Experimento 3: Reatância de dispersão
+
+% Método IEEE
+
 clear;
 % Entradas
 deltaVl = 158.4;    %4.4cm * 36
@@ -51,7 +57,7 @@ X = linsolve(A,B);
 % Assim, o Ef pode ser determinado como:
 Ef = X(1)* Ifl*10^(-3)/(X(2) + Ifl*10^(-3))
 
-% Passo 5:
+% Passo 5: Calculo da regulacao
 reg = (Ef - Vt)/Vt 
 
 

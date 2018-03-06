@@ -1,4 +1,10 @@
-%% Método Potier
+%% Universidade Federal de Campina Grande
+%% Máquinas Elétricas
+% Autor: Lucas Eliseu Gonçalves de Arruda
+% Experimento 3: Reatância de dispersão
+
+% Método Potier
+
 clear;
 % Entradas
 deltaVl = 158.4;    %4.4cm * 36
