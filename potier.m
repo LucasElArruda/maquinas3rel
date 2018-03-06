@@ -1,3 +1,4 @@
+%% Método Potier
 clear;
 % Entradas
 deltaVl = 158.4;    %4.4cm * 36
